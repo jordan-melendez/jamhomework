@@ -13,7 +13,7 @@
 
 
 \newcommand*{\PackageName}{jamhomework}
-\newcommand*{\PackageVersion}{0.1}
+\newcommand*{\PackageVersion}{0.2}
 \newcommand*{\filedate}{2016/01/03}
 
 % IDENTIFICATION

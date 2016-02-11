@@ -5,6 +5,7 @@
 % Jordan Melendez
 % OSU Physics Graduate School Homework Template 2016
 % jamhomework.cls
+% GitHub: https://github.com/jordan-melendez/jamhomework.git
 % Based partially on the Altermundus tkz-doc.cls found here:
 % http://altermundus.com/pages/downloads/index.html
 %

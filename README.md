@@ -1,0 +1,2 @@
+# jamhomework
+LaTeX Homework Template

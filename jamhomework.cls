@@ -5,7 +5,6 @@
 % Jordan Melendez
 % OSU Physics Graduate School Homework Template 2016
 % jamhomework.cls
-% GitHub: https://github.com/jordan-melendez/jamhomework.git
 % Based partially on the Altermundus tkz-doc.cls found here:
 % http://altermundus.com/pages/downloads/index.html
 %
@@ -86,10 +85,15 @@
 
 \newcounter{ProblemNum}
 \newcounter{SubProblemNum}[ProblemNum]
-\setcounter{ProblemNum}{1}
+\setcounter{ProblemNum}{0}
 
 \renewcommand{\theProblemNum}{\arabic{ProblemNum}}
 \renewcommand{\theSubProblemNum}{\alph{SubProblemNum}}
+
+% Makes equations reset with problem number
+% and labels as (problem#.eq#)
+\numberwithin{equation}{ProblemNum}
+\renewcommand{\theequation}{\arabic{ProblemNum}.\arabic{equation}}
 
 %=============== Fancy Sections (disabled) ===============%
 
@@ -198,6 +202,7 @@
 
 \newenvironment{problem}[1][\@nil]{%
 %\parindent=0pt   % If uncommented, new paragraphs are not indented
+\refstepcounter{ProblemNum}%
 \def\FrameCommand{\color{framecolor}
 {\vrule width 1pt\hspace{5pt}}%
 }%
@@ -223,7 +228,6 @@
   \strut\textbf{\texttt{{\BoxName}}}}% The text that goes in the box
   }%
   \fi%
-\refstepcounter{ProblemNum}%
 }\\*[.5\baselineskip]
 \color{framecolor}}{% The lower bounding of the environment
 \par\noindent%

@@ -32,8 +32,12 @@
 \RequirePackage{amsmath,amssymb,amsthm,mathrsfs,mathtools}
 % Physics packages
 \RequirePackage{physics,simplewick,tensor,slashed,esint}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main Font
-\RequirePackage{fourier} % Some like the [upright] option for capital math letters. I do not.
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+% Original font for this package
+% \RequirePackage{fourier} % Some like the [upright] option for capital math letters. I do not.
 \RequirePackage[T1]{fontenc}
 % Fun symbols/pictures
 \RequirePackage{marvosym}
@@ -43,6 +47,24 @@
 \RequirePackage[scaled=0.85]{beramono}
 % Other fonts
 \RequirePackage{dsfont}
+%%%%%%%%
+% I don't like the \mathcal font given by fourier
+% This changes the font back and scales it appropriately:
+% \DeclareFontFamily{OMS}{fcmsy}{\skewchar\font48 }
+% \DeclareFontShape{OMS}{fcmsy}{m}{n}{%
+%          <-5.5> [.942] cmsy5     <5.5-6.5> [.942] cmsy6
+%       <6.5-7.5> [.942] cmsy7     <7.5-8.5> [.942] cmsy8
+%       <8.5-9.5> [.942] cmsy9     <9.5->  [.942] cmsy10
+%       }{}
+% \DeclareFontShape{OMS}{fcmsy}{b}{n}{%
+%        <-6> [.942] cmbsy5
+%       <6-8> [.942] cmbsy7
+%       <8->  [.942] cmbsy10
+%       }{}
+% \DeclareMathAlphabet{\mathcal}{OMS}{fcmsy}{m}{n}
+%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
 % Units
 \RequirePackage{siunitx}
 % Other
@@ -57,20 +79,7 @@
 \RequirePackage[centering,top=1in,bottom=1in,left=1in,right=1in]{geometry}
 % Hyperlinks
 \RequirePackage{hyperref}
-% I don't like the \mathcal font given by fourier
-% This changes the font back and scales it appropriately:
-\DeclareFontFamily{OMS}{fcmsy}{\skewchar\font48 }
-\DeclareFontShape{OMS}{fcmsy}{m}{n}{%
-         <-5.5> [.942] cmsy5     <5.5-6.5> [.942] cmsy6
-      <6.5-7.5> [.942] cmsy7     <7.5-8.5> [.942] cmsy8
-      <8.5-9.5> [.942] cmsy9     <9.5->  [.942] cmsy10
-      }{}
-\DeclareFontShape{OMS}{fcmsy}{b}{n}{%
-       <-6> [.942] cmbsy5
-      <6-8> [.942] cmbsy7
-      <8->  [.942] cmbsy10
-      }{}
-\DeclareMathAlphabet{\mathcal}{OMS}{fcmsy}{m}{n}
+
 
 %=============== Headers/Footers ===============%
 

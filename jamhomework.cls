@@ -21,7 +21,7 @@
 \NeedsTeXFormat{LaTeX2e}[2016/1/01]
 \ProvidesClass{\PackageName}%
 [\filedate\space Version:\space\PackageVersion\space Jordan Melendez's Homework Class]
-\LoadClass[twoside]{report}
+\LoadClass[twoside]{article}
 \PassOptionsToPackage{usenames,dvipsnames,svgnames}{xcolor}
 \RequirePackage{etex}
 \RequirePackage[utf8]{inputenc}
@@ -76,9 +76,10 @@
 \RequirePackage{etoolbox}
 \RequirePackage{lipsum}
 % Redefine page margins
-\RequirePackage[centering,top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\RequirePackage[centering,top=1in,bottom=1in,left=1in,right=1in, marginparwidth=.8in, marginparsep=.1in, heightrounded]{geometry}
 % Hyperlinks
 \RequirePackage{hyperref}
+\RequirePackage{subfig}
 
 
 %=============== Headers/Footers ===============%
@@ -106,7 +107,7 @@
 
 %=============== Fancy Sections (disabled) ===============%
 
-\begin{comment}
+%\begin{comment}
 \usepackage{titlesec}
 \titleformat{\section}[frame] 
 {\normalfont}
@@ -114,7 +115,12 @@
 {8pt} 
 {\Large\bfseries\filcenter}
 \titleformat{\subsection}[block] {\large\bfseries\filright}{\fbox{\thesubsection}}{2em}{}%
-\end{comment}
+%\end{comment}
+
+
+%=============== Define keyword command: puts in margin ===============%
+
+\newcommand{\keyword}[1]{\textbf{#1}\marginpar{\textsf{#1}}}
 
 %=============== Tikz stuff ===============%
 

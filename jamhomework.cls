@@ -103,7 +103,14 @@
 % Makes equations reset with problem number
 % and labels as (problem#.eq#)
 \numberwithin{equation}{ProblemNum}
-\renewcommand{\theequation}{\arabic{ProblemNum}.\arabic{equation}}
+% \renewcommand{\theequation}{\arabic{ProblemNum}.\arabic{equation}}
+
+% If the notes option is passed, label equations with
+% sections rather than by problem number
+\DeclareOption{notes}{\numberwithin{equation}{section}}
+
+% Must be after all \DeclareOption statements
+\ProcessOptions\relax
 
 %=============== Fancy Sections (disabled) ===============%
 

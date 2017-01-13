@@ -216,6 +216,15 @@
 % If you want a bold, upright "Proof." in the proof environment:
 %\renewcommand*{\proofname}{\textbf{\textup{Proof.}}}
 
+
+%=============== Theorem/Example Environments ===============%
+
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+
 %=============== Problem/Exercise Environment ===============%
 
 \let\fram@d=\MakeFramed  \let\endfram@d=\endMakeFramed

@@ -12,15 +12,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand*{\PackageName}{jamhomework}
-\newcommand*{\PackageVersion}{0.2}
-\newcommand*{\filedate}{2016/01/03}
+\newcommand*{\PackageName}{jamwork}
+\newcommand*{\PackageVersion}{0.3}
+\newcommand*{\filedate}{2018/12/19}
 
 % IDENTIFICATION
 
 \NeedsTeXFormat{LaTeX2e}[2016/1/01]
 \ProvidesClass{\PackageName}%
-[\filedate\space Version:\space\PackageVersion\space Jordan Melendez's Homework Class]
+[\filedate\space Version:\space\PackageVersion\space Jordan Melendez's Homework & Notes Class]
 \LoadClass[twoside]{article}
 \PassOptionsToPackage{usenames,dvipsnames,svgnames}{xcolor}
 \RequirePackage{etex}
